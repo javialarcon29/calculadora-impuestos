@@ -1,0 +1,284 @@
+/* Ajustes generales para mejor responsividad */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  /* Mantener la altura mínima de la página */
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5; /* Color de fondo claro */
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px; /* Ajusta el tamaño base del texto para que sea relativo */
+  line-height: 1.6; /* Espaciado adecuado entre líneas */
+}
+
+/* Ajustes para contenedores */
+.container {
+  width: 100%; /* Se asegura que el contenedor ocupe el ancho completo en móviles */
+  max-width: 960px; /* Limita el ancho máximo en pantallas grandes */
+  padding: 2rem 1rem; /* Ajuste del padding para hacerlo más compacto */
+  margin-top: 0rem;  /* Más margen superior para separarlo del top */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Navbar */
+.navbar {
+  border-radius: 8px;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  scroll-behavior: smooth;
+  white-space: nowrap; /* No dividir los elementos en línea */
+  background-color: rgb(206, 206, 14);
+}
+
+.navbar-nav .nav-item {
+  min-width: 120px;
+}
+
+.navbar-nav .nav-link {
+  padding: 10px;
+  color: #495057;
+  transition: color 0.3s, background-color 0.3s;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link.active {
+  color: black;
+  background-color: #004085;
+  border-radius: 6px;
+}
+
+.flag-icon {
+  font-size: 2.5rem;
+}
+
+.country-name {
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+/* Slider */
+.slider-container {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+  width: 100%;
+  position: relative;
+}
+
+.slider-arrow {
+  background-color: rgb(206, 206, 14);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+  border-radius: 50%;
+}
+
+.slider-arrow:hover {
+  background-color: gray;
+}
+
+.left-arrow {
+  left: -55px;
+}
+
+.right-arrow {
+  right: -55px;
+}
+
+/* Formulario */
+.card {
+  background-color: rgb(206, 206, 14) !important;
+  border-radius: 10px;
+  padding: 1rem; /* Espacio más pequeño para reducir la altura */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0rem;
+  margin-top: 10%;
+  max-width: 100%; /* Para móviles, que ocupe todo el ancho */
+  width: 100%; /* Ocupa todo el ancho */
+  text-align: center;
+}
+
+.card h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #004085;
+  margin-bottom: 1.5rem;
+}
+
+/* Estilos del formulario */
+.form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #004085;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  box-shadow: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #004085;
+  box-shadow: 0 0 0 0.2rem rgba(0, 64, 133, 0.25);
+}
+
+.form-control::placeholder {
+  color: #6c757d;
+}
+
+/* Estilos del botón */
+.btn {
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background-color: #004085;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background-color: #002752;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 64, 133, 0.25);
+}
+
+/* Resultado */
+.result-container {
+  background-color: rgb(206, 206, 14);
+  padding: 1.5rem; 
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 4.5rem; 
+  width: 100%; 
+  max-width: 1200px; 
+  text-align: center;
+  border: 5px solid white;
+}
+
+.result-container h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #004085;
+  margin-bottom: 1rem; 
+}
+
+.result-container p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #495057;
+  margin-bottom: 0.5rem; 
+}
+
+.result-container p strong {
+  font-weight: 700;
+  color: #004085;
+}
+
+.result-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #28a745;
+  margin-top: 0.5rem; 
+}
+
+.result-divider {
+  border-top: 2px solid white;
+  margin: 1rem 0; 
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 0.5rem;
+  }
+
+  .card {
+    margin-top: 5%;
+  }
+
+  .navbar-nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .navbar-nav .nav-item {
+    min-width: auto;
+  }
+
+  .slider-arrow {
+    display: none;
+  }
+
+  .result-container {
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+
+  .result-container h3 {
+    font-size: 1.5rem;
+  }
+
+  .result-value {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: 14px;
+  }
+
+  .card h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .flag-icon {
+    font-size: 2rem;
+  }
+
+  .country-name {
+    font-size: 0.65rem;
+  }
+}
