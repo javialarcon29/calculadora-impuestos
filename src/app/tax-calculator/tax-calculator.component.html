@@ -23,9 +23,7 @@
   <div class="row justify-content-center">
     <div class="col-md-6">
       <div class="card shadow-sm p-5 rounded-3">
-        <!-- Agregamos el nuevo título dentro del formulario -->
         <h2 class="text-center mb-4">Calculadora de Impuestos sobre Sociedades - UE</h2>
-        
         <div class="form-group mb-4">
           <label for="incomeInput" class="form-label">Ingreso anual / Beneficio (en euros):</label>
           <input [(ngModel)]="annualIncome" type="number" class="form-control form-control-lg" id="incomeInput" placeholder="Ingresa el monto">
@@ -35,17 +33,16 @@
     </div>
   </div>
 
-<!-- Resultados -->
-<div class="row justify-content-center">
-  <div class="col-md-12"> <!-- Aumento a col-md-10 para mayor anchura -->
-    <div *ngIf="taxResult" class="result-container">
-      <h3>Resultado del Impuesto sobre Sociedades</h3>
-      <hr class="result-divider">
-      <p><strong>País seleccionado:</strong> {{ selectedCountry?.country }}</p>
-      <p><strong>Porcentaje del impuesto:</strong> {{ taxResult.corporateTaxRate }}%</p>
-      <p class="result-value"><strong>Monto a pagar:</strong> {{ taxResult.corporateTaxAmount | currency:'EUR' }}</p>
+  <!-- Resultados -->
+  <div class="row justify-content-center">
+    <div class="col-md-12">
+      <div *ngIf="taxResult" class="result-container">
+        <h3>Resultado del Impuesto sobre Sociedades</h3>
+        <hr class="result-divider">
+        <p><strong>País seleccionado:</strong> {{ selectedCountry?.country }}</p>
+        <p><strong>Porcentaje del impuesto:</strong> {{ taxResult.corporateTaxRate }}%</p>
+        <p class="result-value"><strong>Monto a pagar:</strong> {{ taxResult.corporateTaxAmount | currency:'EUR' }}</p>
+      </div>
     </div>
   </div>
 </div>
-
-

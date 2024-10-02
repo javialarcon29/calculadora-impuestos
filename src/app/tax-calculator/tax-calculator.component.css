@@ -1,22 +1,22 @@
-/* Ajustes generales para mejor responsividad */
+/* Estilos generales */
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;  /* Mantener la altura mínima de la página */
+  min-height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5; /* Color de fondo claro */
+  background-color: #f5f5f5;
   font-family: 'Roboto', sans-serif;
-  font-size: 16px; /* Ajusta el tamaño base del texto para que sea relativo */
-  line-height: 1.6; /* Espaciado adecuado entre líneas */
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-/* Ajustes para contenedores */
+/* Contenedor principal */
 .container {
-  width: 100%; /* Se asegura que el contenedor ocupe el ancho completo en móviles */
-  max-width: 960px; /* Limita el ancho máximo en pantallas grandes */
-  padding: 2rem 1rem; /* Ajuste del padding para hacerlo más compacto */
-  margin-top: 0rem;  /* Más margen superior para separarlo del top */
+  width: 100%;
+  max-width: 960px;
+  padding: 2rem 1rem;
+  margin-top: 0rem;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -53,6 +53,7 @@ body {
   border-radius: 6px;
 }
 
+/* Bandera y nombre del país */
 .flag-icon {
   font-size: 2.5rem;
 }
@@ -65,7 +66,7 @@ body {
 /* Slider */
 .slider-container {
   display: flex;
-  overflow: hidden;
+  overflow-x: auto; /* Permitir desplazamiento horizontal en móviles */
   scroll-behavior: smooth;
   padding-bottom: 10px;
   width: 100%;
@@ -87,7 +88,6 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 1;
-  transition: background-color 0.3s ease;
   border-radius: 50%;
 }
 
@@ -103,16 +103,16 @@ body {
   right: -55px;
 }
 
-/* Formulario */
+/* Tarjeta */
 .card {
-  background-color: rgb(206, 206, 14) !important;
+  background-color: rgb(206, 206, 14);
   border-radius: 10px;
-  padding: 1rem; /* Espacio más pequeño para reducir la altura */
+  padding: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin-bottom: 0rem;
   margin-top: 10%;
-  max-width: 100%; /* Para móviles, que ocupe todo el ancho */
-  width: 100%; /* Ocupa todo el ancho */
+  max-width: 100%;
+  width: 100%;
   text-align: center;
 }
 
@@ -182,12 +182,12 @@ body {
 /* Resultado */
 .result-container {
   background-color: rgb(206, 206, 14);
-  padding: 1.5rem; 
+  padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-top: 4.5rem; 
-  width: 100%; 
-  max-width: 1200px; 
+  margin-top: 4.5rem;
+  width: 100%;
+  max-width: 1200px;
   text-align: center;
   border: 5px solid white;
 }
@@ -196,14 +196,14 @@ body {
   font-size: 1.75rem;
   font-weight: 700;
   color: #004085;
-  margin-bottom: 1rem; 
+  margin-bottom: 1rem;
 }
 
 .result-container p {
   font-size: 1rem;
   font-weight: 500;
   color: #495057;
-  margin-bottom: 0.5rem; 
+  margin-bottom: 0.5rem;
 }
 
 .result-container p strong {
@@ -215,12 +215,12 @@ body {
   font-size: 1.75rem;
   font-weight: 700;
   color: #28a745;
-  margin-top: 0.5rem; 
+  margin-top: 0.5rem;
 }
 
 .result-divider {
   border-top: 2px solid white;
-  margin: 1rem 0; 
+  margin: 1rem 0;
 }
 
 /* Ajustes responsivos */
@@ -244,7 +244,7 @@ body {
   }
 
   .slider-arrow {
-    display: none;
+    display: block; /* Asegura que las flechas se muestren en móviles */
   }
 
   .result-container {
